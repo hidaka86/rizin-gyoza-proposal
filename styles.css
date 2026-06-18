@@ -520,3 +520,9 @@ html { scrollbar-color: var(--green) transparent; }
 @media (max-width: 760px) {
   .proof-hero { grid-template-columns: 1fr; gap: 20px; }
 }
+
+/* ===== Mid-to-long term: confident claim ===== */
+.big-claim {
+  font-size: clamp(20px, 3.6vw, 30px); font-weight: 700; line-height: 1.5;
+  margin: 0 0 28px; letter-spacing: 0.01em;
+}
