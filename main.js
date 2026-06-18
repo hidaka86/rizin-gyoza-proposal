@@ -31,8 +31,13 @@
     var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
     progress.style.width = pct + "%";
   }
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  updateProgress();
+  var nav = document.getElementById("nav");
+  function onScroll() {
+    updateProgress();
+    if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
   /* --- Mobile menu toggle --- */
   var toggle = document.getElementById("navToggle");

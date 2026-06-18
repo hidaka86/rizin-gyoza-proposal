@@ -53,10 +53,67 @@
         <div><dt>Proposed by</dt><dd>株式会社bf2</dd></div>
       </dl>
     </div>
-    <div class="hero__visual" aria-hidden="true">
-      <div class="hero__plate">
-        <span class="hero__plate-label">PRODUCT IMAGE</span>
-        <span class="hero__plate-sub">餃子イメージ（差し替え予定）</span>
+    <div class="hero__visual">
+      <div class="hero__dish">
+        <svg class="gyoza-art" viewBox="0 0 400 340" role="img" aria-label="プロテイン餃子（羽根つき）のイラスト">
+          <defs>
+            <radialGradient id="plateG" cx="50%" cy="38%" r="72%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#e7edf2" />
+            </radialGradient>
+            <linearGradient id="doughG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fceccb" />
+              <stop offset="55%" stop-color="#f3d99b" />
+              <stop offset="100%" stop-color="#e7bd71" />
+            </linearGradient>
+            <linearGradient id="wingG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e0ac52" />
+              <stop offset="100%" stop-color="#bf842d" />
+            </linearGradient>
+            <g id="gz">
+              <path d="M8,44 C8,52 112,52 112,44 C112,50 100,58 60,58 C20,58 8,50 8,44 Z" fill="#cf953c" />
+              <path d="M8,44 C8,18 36,8 60,8 C84,8 112,18 112,44 C88,54 32,54 8,44 Z" fill="url(#doughG)" />
+              <path d="M22,26 C40,16 80,16 98,26 C80,20 40,20 22,26 Z" fill="#fff8e6" opacity=".55" />
+              <g fill="none" stroke="#bd8a3e" stroke-width="2.4" stroke-linecap="round" opacity=".5">
+                <path d="M30,15 l-5,12" /><path d="M44,11 l-4,13" /><path d="M58,10 l-2,14" />
+                <path d="M72,11 l3,13" /><path d="M86,15 l5,12" />
+              </g>
+            </g>
+          </defs>
+
+          <!-- steam -->
+          <g class="steam" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" aria-hidden="true">
+            <path d="M165 132 q-16 -20 0 -40 q16 -20 0 -40" />
+            <path d="M205 122 q-16 -20 0 -40 q16 -20 0 -40" />
+            <path d="M245 134 q-16 -20 0 -40 q16 -20 0 -40" />
+          </g>
+
+          <!-- plate -->
+          <ellipse cx="200" cy="252" rx="178" ry="60" fill="#05080b" opacity="0.35" />
+          <ellipse cx="200" cy="242" rx="178" ry="64" fill="url(#plateG)" />
+          <ellipse cx="200" cy="238" rx="146" ry="48" fill="#dbe3ea" />
+          <ellipse cx="200" cy="234" rx="142" ry="46" fill="#eef2f6" />
+
+          <!-- crispy wing (羽根) -->
+          <path d="M62,206 Q200,250 338,206 Q333,228 300,224 Q280,236 256,224 Q236,236 211,225 Q191,236 166,224 Q146,235 121,223 Q101,234 79,222 Q68,220 62,206 Z" fill="url(#wingG)" />
+
+          <!-- gyoza trio -->
+          <use href="#gz" transform="translate(44,150)" />
+          <use href="#gz" transform="translate(238,150) scale(0.96)" />
+          <use href="#gz" transform="translate(140,138) scale(1.12)" />
+
+          <!-- green garnish -->
+          <g fill="#1DB584">
+            <rect x="118" y="172" width="13" height="4" rx="2" transform="rotate(24 124 174)" />
+            <rect x="205" y="160" width="13" height="4" rx="2" transform="rotate(-18 211 162)" />
+            <rect x="244" y="178" width="12" height="4" rx="2" transform="rotate(36 250 180)" />
+            <rect x="172" y="186" width="12" height="4" rx="2" transform="rotate(-8 178 188)" />
+          </g>
+        </svg>
+      </div>
+      <div class="hero__badge" aria-label="たんぱく質 1個あたり 4.7g">
+        <span class="hero__badge-num">4.7<span>g</span></span>
+        <span class="hero__badge-label">PROTEIN / 1個</span>
       </div>
     </div>
   </div>
@@ -243,6 +300,26 @@
     </div>
 
     <div class="concept reveal">
+      <svg class="concept__icon" viewBox="0 0 120 78" role="img" aria-label="餃子アイコン" aria-hidden="true">
+        <defs>
+          <linearGradient id="doughG2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fceccb" />
+            <stop offset="55%" stop-color="#f3d99b" />
+            <stop offset="100%" stop-color="#e7bd71" />
+          </linearGradient>
+        </defs>
+        <path d="M10,58 C10,66 110,66 110,58 C110,64 98,70 60,70 C22,70 10,64 10,58 Z" fill="#cf953c" />
+        <path d="M10,58 C10,28 38,16 60,16 C82,16 110,28 110,58 C86,68 34,68 10,58 Z" fill="url(#doughG2)" />
+        <path d="M24,38 C42,27 78,27 96,38 C78,32 42,32 24,38 Z" fill="#fff8e6" opacity=".55" />
+        <g fill="none" stroke="#bd8a3e" stroke-width="2.6" stroke-linecap="round" opacity=".5">
+          <path d="M34,24 l-6,14" /><path d="M48,19 l-4,16" /><path d="M62,17 l-2,17" />
+          <path d="M76,19 l4,15" /><path d="M90,24 l6,14" />
+        </g>
+        <g fill="#1DB584">
+          <rect x="46" y="40" width="13" height="4" rx="2" transform="rotate(-16 52 42)" />
+          <rect x="68" y="46" width="12" height="4" rx="2" transform="rotate(28 74 48)" />
+        </g>
+      </svg>
       <p class="concept__label">コンセプト（仮）</p>
       <p class="concept__title">「格闘家も普段食べる」<br /><span class="accent-green">本物のプロテイン餃子</span></p>
       <p class="concept__sub">サプリのような&ldquo;特別なもの&rdquo;ではなく、毎日の食卓に並ぶ&ldquo;美味しい食事&rdquo;として。</p>
