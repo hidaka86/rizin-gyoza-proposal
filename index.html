@@ -54,63 +54,9 @@
       </dl>
     </div>
     <div class="hero__visual">
-      <div class="hero__dish">
-        <svg class="gyoza-art" viewBox="0 0 400 340" role="img" aria-label="プロテイン餃子（羽根つき）のイラスト">
-          <defs>
-            <radialGradient id="plateG" cx="50%" cy="38%" r="72%">
-              <stop offset="0%" stop-color="#ffffff" />
-              <stop offset="100%" stop-color="#e7edf2" />
-            </radialGradient>
-            <linearGradient id="doughG" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#fceccb" />
-              <stop offset="55%" stop-color="#f3d99b" />
-              <stop offset="100%" stop-color="#e7bd71" />
-            </linearGradient>
-            <linearGradient id="wingG" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#e0ac52" />
-              <stop offset="100%" stop-color="#bf842d" />
-            </linearGradient>
-            <g id="gz">
-              <path d="M8,44 C8,52 112,52 112,44 C112,50 100,58 60,58 C20,58 8,50 8,44 Z" fill="#cf953c" />
-              <path d="M8,44 C8,18 36,8 60,8 C84,8 112,18 112,44 C88,54 32,54 8,44 Z" fill="url(#doughG)" />
-              <path d="M22,26 C40,16 80,16 98,26 C80,20 40,20 22,26 Z" fill="#fff8e6" opacity=".55" />
-              <g fill="none" stroke="#bd8a3e" stroke-width="2.4" stroke-linecap="round" opacity=".5">
-                <path d="M30,15 l-5,12" /><path d="M44,11 l-4,13" /><path d="M58,10 l-2,14" />
-                <path d="M72,11 l3,13" /><path d="M86,15 l5,12" />
-              </g>
-            </g>
-          </defs>
-
-          <!-- steam -->
-          <g class="steam" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" aria-hidden="true">
-            <path d="M165 132 q-16 -20 0 -40 q16 -20 0 -40" />
-            <path d="M205 122 q-16 -20 0 -40 q16 -20 0 -40" />
-            <path d="M245 134 q-16 -20 0 -40 q16 -20 0 -40" />
-          </g>
-
-          <!-- plate -->
-          <ellipse cx="200" cy="252" rx="178" ry="60" fill="#05080b" opacity="0.35" />
-          <ellipse cx="200" cy="242" rx="178" ry="64" fill="url(#plateG)" />
-          <ellipse cx="200" cy="238" rx="146" ry="48" fill="#dbe3ea" />
-          <ellipse cx="200" cy="234" rx="142" ry="46" fill="#eef2f6" />
-
-          <!-- crispy wing (羽根) -->
-          <path d="M62,206 Q200,250 338,206 Q333,228 300,224 Q280,236 256,224 Q236,236 211,225 Q191,236 166,224 Q146,235 121,223 Q101,234 79,222 Q68,220 62,206 Z" fill="url(#wingG)" />
-
-          <!-- gyoza trio -->
-          <use href="#gz" transform="translate(44,150)" />
-          <use href="#gz" transform="translate(238,150) scale(0.96)" />
-          <use href="#gz" transform="translate(140,138) scale(1.12)" />
-
-          <!-- green garnish -->
-          <g fill="#1DB584">
-            <rect x="118" y="172" width="13" height="4" rx="2" transform="rotate(24 124 174)" />
-            <rect x="205" y="160" width="13" height="4" rx="2" transform="rotate(-18 211 162)" />
-            <rect x="244" y="178" width="12" height="4" rx="2" transform="rotate(36 250 180)" />
-            <rect x="172" y="186" width="12" height="4" rx="2" transform="rotate(-8 178 188)" />
-          </g>
-        </svg>
-      </div>
+      <figure class="hero__photo">
+        <img src="gyoza.jpg" alt="香ばしく焼き上げたプロテイン餃子" width="640" height="480" loading="eager" />
+      </figure>
       <div class="hero__badge" aria-label="たんぱく質 1個あたり 4.7g">
         <span class="hero__badge-num">4.7<span>g</span></span>
         <span class="hero__badge-label">PROTEIN / 1個</span>
@@ -215,23 +161,30 @@
       <h2>商品の証明 <span class="en">Why This Product Wins</span></h2>
     </div>
 
-    <p class="lead reveal">この餃子のスペック（1個あたり）</p>
-    <div class="spec-row reveal">
-      <div class="spec">
-        <p class="spec__num accent-green">4.7<span class="spec__unit">g</span></p>
-        <p class="spec__label">たんぱく質</p>
+    <div class="proof-hero reveal">
+      <figure class="proof-photo">
+        <img src="gyoza.jpg" alt="焼き上げたプロテイン餃子" width="640" height="480" loading="lazy" />
+      </figure>
+      <div class="proof-specs">
+        <p class="lead">この餃子のスペック（1個あたり）</p>
+        <div class="spec-row">
+          <div class="spec">
+            <p class="spec__num accent-green">4.7<span class="spec__unit">g</span></p>
+            <p class="spec__label">たんぱく質</p>
+          </div>
+          <div class="spec">
+            <p class="spec__num">0.8<span class="spec__unit">g</span></p>
+            <p class="spec__label">脂質</p>
+          </div>
+          <div class="spec">
+            <p class="spec__num">46<span class="spec__unit">kcal</span></p>
+            <p class="spec__label">エネルギー</p>
+          </div>
+        </div>
+        <div class="spec-callout">
+          <p>→ 8個入りで <strong class="accent-green">たんぱく質37.6g</strong>（1食でサラダチキン約2個分相当）</p>
+        </div>
       </div>
-      <div class="spec">
-        <p class="spec__num">0.8<span class="spec__unit">g</span></p>
-        <p class="spec__label">脂質</p>
-      </div>
-      <div class="spec">
-        <p class="spec__num">46<span class="spec__unit">kcal</span></p>
-        <p class="spec__label">エネルギー</p>
-      </div>
-    </div>
-    <div class="spec-callout reveal">
-      <p>→ 8個入りで <strong class="accent-green">たんぱく質37.6g</strong>（1食でサラダチキン約2個分相当）</p>
     </div>
 
     <p class="lead reveal">競合比較表（1個あたり）</p>
