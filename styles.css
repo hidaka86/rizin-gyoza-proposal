@@ -653,3 +653,32 @@ html { scrollbar-color: var(--green) transparent; }
 .tcard__hook p { font-size: 14px; line-height: 1.85; color: #4b5563; }
 .tcard__hook strong { color: var(--ink); }
 @media (max-width: 680px) { .targets { grid-template-columns: 1fr; } }
+
+/* ===== 2-column cards (課題) ===== */
+.cards-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 680px) { .cards-2 { grid-template-columns: 1fr; } }
+
+/* ===================================================================
+   技術的裏付け — visual cards (gradient header + big icon & number)
+   =================================================================== */
+.techcard { padding: 0; overflow: hidden; }
+.techcard__head {
+  position: relative; height: 122px; overflow: hidden;
+  background: linear-gradient(135deg, #1DB584 0%, #0e8c66 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.techcard__head::before {
+  content: ""; position: absolute; right: -28px; top: -28px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+.techcard__icon { position: relative; z-index: 2; color: #fff; display: flex; }
+.techcard__icon svg { width: 50px; height: 50px; display: block; }
+.techcard__no {
+  position: absolute; left: 16px; bottom: -22px; z-index: 1;
+  font-size: 96px; font-weight: 700; line-height: 1; letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.18); font-variant-numeric: tabular-nums;
+}
+.techcard__body { padding: 22px 24px 26px; }
+.techcard__body h3 { font-size: 18.5px; font-weight: 700; margin-bottom: 10px; line-height: 1.45; }
+.techcard__body p { font-size: 14px; color: #4b5563; line-height: 1.9; }
