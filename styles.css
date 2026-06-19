@@ -682,3 +682,71 @@ html { scrollbar-color: var(--green) transparent; }
 .techcard__body { padding: 22px 24px 26px; }
 .techcard__body h3 { font-size: 18.5px; font-weight: 700; margin-bottom: 10px; line-height: 1.45; }
 .techcard__body p { font-size: 14px; color: #4b5563; line-height: 1.9; }
+
+/* ===================================================================
+   Brush-up v2 — editorial polish across the whole page
+   =================================================================== */
+
+/* --- Section index numbers (01, 02, ...) as a faint watermark --- */
+main { counter-reset: sec; }
+.section { counter-increment: sec; }
+.section__head { position: relative; padding-right: 92px; }
+.section__head::after {
+  content: counter(sec, decimal-leading-zero);
+  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+  font-size: clamp(44px, 6vw, 76px); font-weight: 700; line-height: 1;
+  letter-spacing: -0.03em; font-variant-numeric: tabular-nums;
+  color: rgba(15, 20, 25, 0.055); pointer-events: none; user-select: none;
+}
+.section--alt .section__head::after { color: rgba(15, 20, 25, 0.06); }
+.section--dark .section__head::after { color: rgba(255, 255, 255, 0.08); }
+@media (max-width: 600px) { .section__head { padding-right: 0; } .section__head::after { display: none; } }
+
+/* --- Dark sections: subtle brand glow for cohesion with hero --- */
+.section--dark { position: relative; overflow: hidden; }
+.section--dark::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(680px 320px at 88% -8%, rgba(29, 181, 132, 0.12), transparent 62%),
+    radial-gradient(520px 300px at 0% 108%, rgba(255, 59, 78, 0.07), transparent 58%);
+}
+.section--dark .container { position: relative; z-index: 1; }
+
+/* --- Lead: small green tick before the label --- */
+.lead { display: flex; align-items: center; gap: 9px; }
+.lead::before {
+  content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--green);
+  flex: none; transform: rotate(45deg);
+}
+.section--dark .lead::before { background: var(--green); }
+
+/* --- Section divider accent: thin gradient line on borders --- */
+.section { position: relative; }
+
+/* --- Footer brush-up --- */
+.footer { position: relative; }
+.footer::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green), #0e8c66 60%, var(--red));
+}
+.footer__brand { font-size: 17px; font-weight: 700; color: #fff; letter-spacing: 0.01em; margin-bottom: 4px; }
+.footer__brand .x { color: rgba(255,255,255,0.5); }
+.footer__top {
+  display: inline-block; margin-top: 14px; font-size: 12.5px; color: rgba(255,255,255,0.6);
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;
+  padding: 7px 18px; transition: color .15s, border-color .15s, background .15s;
+}
+.footer__top:hover { color: #fff; border-color: var(--green); background: rgba(29,181,132,0.12); }
+
+/* --- Card hover: unify lift for all card variants --- */
+.tcard:hover, .techcard:hover, .kpi-card:hover, .dept:hover, .scenario:hover {
+  transform: translateY(-4px); box-shadow: var(--shadow-lg);
+}
+.tcard, .techcard, .kpi-card, .dept, .scenario { transition: transform .22s ease, box-shadow .22s ease; }
+
+/* --- Smoother section-head bar --- */
+.section__head .bar { background: linear-gradient(180deg, var(--green), #0e8c66); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tcard:hover, .techcard:hover, .kpi-card:hover, .dept:hover, .scenario:hover { transform: none; }
+}
