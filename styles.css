@@ -845,3 +845,124 @@ main { counter-reset: sec; }
 .bmodel__foot { text-align: center; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin-top: 6px; }
 .bmodel__foot strong { color: #fff; }
 @media (max-width: 760px) { .bmodels { grid-template-columns: 1fr; } }
+
+/* ===================================================================
+   なぜRIZIN — 4 pillars (with X-post screenshot)
+   =================================================================== */
+.pillars { display: grid; gap: 16px; margin-bottom: 30px; }
+.pillar {
+  display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 26px 28px;
+}
+.pillar__no {
+  width: 48px; height: 48px; border-radius: 13px; background: var(--green-soft);
+  color: var(--green-ink); display: flex; align-items: center; justify-content: center;
+  font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.pillar__body h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.55; }
+.pillar__body p { font-size: 14.5px; color: #4b5563; line-height: 1.95; }
+.pillar__shot { margin: 18px 0 0; max-width: 340px; }
+.pillar__shot img { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.pillar__shot figcaption { font-size: 12px; color: var(--sub); margin-top: 9px; line-height: 1.7; }
+@media (max-width: 680px) { .pillar { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; } }
+
+/* ===================================================================
+   価格設定 — price scale map, band table, reasons
+   =================================================================== */
+.pricescale { margin: 8px 0 34px; }
+.pricescale__axis { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: var(--sub); letter-spacing: 0.06em; margin-bottom: 6px; }
+.pricescale__nodes { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.pricescale__nodes::before {
+  content: ""; position: absolute; left: 6%; right: 6%; top: 52px; height: 4px; border-radius: 4px;
+  background: linear-gradient(90deg, #cbd5e1, var(--green) 70%, #0e8c66);
+}
+.psn { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 0; }
+.psn__price { font-size: 22px; font-weight: 700; color: #64748b; line-height: 1.1; }
+.psn__price small { font-size: 12px; }
+.psn__dot { width: 16px; height: 16px; border-radius: 50%; background: #94a3b8; border: 3px solid #fff; box-shadow: 0 0 0 1px #cbd5e1; margin: 12px 0 14px; }
+.psn__name { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.4; }
+.psn__pos { font-size: 11.5px; color: var(--sub); margin-top: 3px; line-height: 1.4; }
+.psn--own .psn__price { font-size: 30px; color: var(--green-ink); }
+.psn--own .psn__dot { width: 22px; height: 22px; background: var(--green); box-shadow: 0 0 0 5px var(--green-soft); margin-top: 6px; }
+.psn--own .psn__name { color: var(--green-ink); }
+.psn--own .psn__pos { color: var(--green-ink); font-weight: 700; }
+@media (max-width: 600px) {
+  .pricescale__nodes { grid-template-columns: 1fr 1fr; gap: 24px 10px; }
+  .pricescale__nodes::before { display: none; }
+}
+
+.bandtable th[scope="row"] { white-space: normal; min-width: 120px; }
+.bandtable td, .bandtable th { text-align: left; vertical-align: middle; }
+.bandtable .bandtable__own { background: var(--green-soft); }
+.bandtable .bandtable__own th[scope="row"] { background: var(--green-soft); color: var(--green-ink); }
+.bandtable .bandtable__own td { color: var(--ink); }
+
+.reasons p { font-size: 14.5px; color: #374151; line-height: 1.95; margin-bottom: 14px; }
+.reasons strong { color: var(--ink); }
+.reasons__note {
+  margin-top: 4px; padding: 16px 18px; background: var(--green-soft);
+  border-radius: var(--radius-sm); border-left: 3px solid var(--green); font-size: 14px !important; color: #1f3d33 !important;
+}
+
+/* ===================================================================
+   販売計画 — channel cards & price ladder
+   =================================================================== */
+.channel-intro {
+  margin-bottom: 26px; padding: 20px 24px; border-radius: var(--radius);
+  background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--navy); box-shadow: var(--shadow);
+}
+.channel-intro__label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--navy); margin-bottom: 8px; }
+.channel-intro p:last-child { font-size: 15px; line-height: 1.9; }
+
+.channel { display: flex; flex-direction: column; }
+.channel--ec { border-top: 3px solid var(--green); }
+.channel--venue { border-top: 3px solid var(--red); }
+.channel__tag { font-size: 20px; font-weight: 700; }
+.channel--ec .channel__tag { color: var(--green-ink); }
+.channel--venue .channel__tag { color: var(--red); }
+.channel__role { font-size: 13px; font-weight: 700; color: var(--sub); margin: 4px 0 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.channel__block { margin-bottom: 16px; }
+.channel__h { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: var(--sub); margin-bottom: 6px; }
+.channel__block > p { font-size: 14px; color: #374151; line-height: 1.85; }
+.channel__block strong { color: var(--ink); }
+.channel__sku { list-style: none; display: grid; gap: 10px; }
+.channel__sku li {
+  display: grid; gap: 2px; padding: 12px 14px; background: var(--bg-alt); border-radius: var(--radius-sm);
+}
+.channel__skuname { font-size: 12px; font-weight: 700; color: var(--sub); }
+.channel__skuprice { font-size: 16px; font-weight: 700; color: var(--ink); }
+.channel__skuprice small { font-size: 12px; color: var(--sub); font-weight: 500; }
+.channel__skunote { font-size: 12.5px; color: #4b5563; line-height: 1.6; }
+.channel__just { margin: 0; padding-left: 0; list-style: none; counter-reset: cj; display: grid; gap: 8px; }
+.channel__just li { position: relative; padding-left: 26px; font-size: 13.5px; color: #4b5563; line-height: 1.7; counter-increment: cj; }
+.channel__just li::before {
+  content: counter(cj); position: absolute; left: 0; top: 1px; width: 18px; height: 18px;
+  border-radius: 50%; background: var(--green-soft); color: var(--green-ink);
+  font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.channel--venue .channel__just li::before { background: var(--red-soft); color: var(--red); }
+
+.ladder {
+  margin-top: 24px; padding: 28px 26px; border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; box-shadow: var(--shadow-lg);
+}
+.ladder__label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--green); margin-bottom: 18px; }
+.ladder__steps { display: flex; align-items: flex-end; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.ladder__step {
+  flex: 1; min-width: 130px; max-width: 240px; text-align: center; padding: 18px 14px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.ladder__step--top { background: rgba(29,181,132,0.14); border-color: var(--green); }
+.ladder__price { font-size: 26px; font-weight: 700; color: #fff; }
+.ladder__step--top .ladder__price { color: var(--green); }
+.ladder__for { font-size: 12px; color: rgba(255,255,255,0.7); }
+.ladder__lt { align-self: center; font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.45); }
+.ladder__note { margin-top: 18px; font-size: 13.5px; color: rgba(255,255,255,0.78); line-height: 1.85; text-align: center; }
+.ladder__note .accent-green { color: var(--green); }
+@media (max-width: 600px) {
+  .ladder__steps { flex-direction: column; align-items: stretch; }
+  .ladder__step { max-width: none; }
+  .ladder__lt { transform: rotate(90deg); }
+}
